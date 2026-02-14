@@ -24,7 +24,7 @@ export default function MessageScreen({ onNext, ...motionProps }) {
     return (
         <motion.div {...motionProps} className="min-h-screen flex items-center justify-center px-6 relative">
 
-            <div className="max-w-4xl text-center z-10">
+            <div className="max-w-4xl text-center z-10 m-10">
                 <motion.div
                     className="mb-8 flex justify-center"
                     initial={{ scale: 0, opacity: 0 }}

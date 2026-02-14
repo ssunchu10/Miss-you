@@ -32,7 +32,7 @@ export default function WelcomeScreen({ onNext, ...motionProps }) {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.9 }}
                 >
-                    Do you even know how much I miss you?
+                    Do you even know how much you mean to me? and how much it hurts me everyday to see you getting detached from me? I miss you so much and I want you back in my life❤️
                 </motion.p>
 
                 <motion.div

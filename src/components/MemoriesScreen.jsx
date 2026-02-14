@@ -9,7 +9,6 @@ import "swiper/css/pagination";
 import { memories } from "@/data";
 
 export default function MemoriesScreen({ onNext, ...motionProps }) {
-
   return (
     <motion.div
       {...motionProps}
@@ -60,9 +59,25 @@ export default function MemoriesScreen({ onNext, ...motionProps }) {
           {memories.map((memory) => (
             <SwiperSlide key={memory.id} className="!w-80 !h-80">
               <div
-                className={`w-full h-full rounded-3xl flex flex-col items-center justify-center shadow-2xl relative overflow-hidden`}
+                className={`w-full h-full rounded-3xl flex items-center justify-center shadow-2xl relative overflow-hidden`}
               >
-                <img src={memory.imgSrc} alt="memories" />
+                {memory.type === "video" ? (
+                  <video
+                    src={memory.videoSrc}
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                  />
+                ) : (
+                  <img
+                    src={memory.imgSrc}
+                    alt="memories"
+                    className="w-full h-full object-cover"
+                  />
+                )}
               </div>
             </SwiperSlide>
           ))}

@@ -26,7 +26,7 @@ body {
   user-select: none;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
@@ -93,7 +93,15 @@ button{
 
 /* Remove any unwanted hover effects */
 .swiper-slide * {
-  pointer-events: none;
+  pointer-events: auto;
+}
+
+/* Allow interactive elements inside slides to receive pointer events
+   (e.g. video controls, buttons, links, images that need clicks) */
+.swiper-slide img,
+.swiper-slide video,
+.swiper-slide button {
+  pointer-events: auto;
 }
 
 .swiper-slide {

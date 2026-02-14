@@ -20,7 +20,7 @@ export default function Loader({ onNext }) {
   // Auto-advance to the next screen after the loader animation completes.
   useEffect(() => {
     if (!onNext) return;
-    const autoAdvanceMs = 4300; // matches ~4.24s SVG animation + small margin
+    const autoAdvanceMs = 7000; // matches ~4.24s SVG animation + small margin
     const t = setTimeout(() => {
       try {
         onNext();
